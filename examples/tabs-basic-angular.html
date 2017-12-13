@@ -1,0 +1,11 @@
+<uib-tabset>
+  <uib-tab>
+    <uib-tab-heading>
+      <i class="fa fa-star" aria-hidden="true"></i> Fancy Heading
+    </uib-tab-heading>
+    <p> Fancy Content </p>
+  </uib-tab>
+  <uib-tab ng-repeat="tab in tabs" heading="tab.name" active="tab.active" disabled="tab.disabled">
+    <p>{{ tab.content }}</p>
+  </uib-tab>
+</uib-tabset>

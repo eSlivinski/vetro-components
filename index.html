@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang=en ng-app="vetro">
+  <head>
+    <meta charset="UTF-8">
+    <title>VETRO FiberMap Style Guide</title>
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="icon" href="/media/images/favicon.ico" type="image/x-icon"/>
+    <link rel="shortcut icon" href="/media/images/favicon.ico" type="image/x-icon"/>
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale= 1.0, user-scalable=yes"> -->
+    <meta id="viewport" name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, target-densitydpi=device-dpi" />
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,300italic,400italic,600italic|Lato:100,300,400,600,700,800,300italic,400italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <link rel="stylesheet" href="styles/app.css"/>
+    <link rel="stylesheet" href="styleguide.css"/>
+  </head>
+  <body>
+
+    <div id="main-content" class="container-fluid hidden">
+      <div class="row">
+        <nav id="styleguide-header" class="navbar navbar-default">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <a class="navbar-brand" href="#">
+                <img alt="Brand" src="media/images/vetro_logo_circle.png">
+                Vetro FiberMap Style Guide
+              </a>
+            </div>
+          </div>
+        </nav>
+      </div>
+
+
+      <div class="row">
+        <!-- Sidebar -->
+        <div id="guide-sidebar" class="col-sm-4">
+          <div class="row">
+            <div class="list-group">
+               <!-- Sidebar Options Will Be Appended Here -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Content -->
+        <div id="guide-content" class="col-sm-8">
+
+          <section id="home" section-title="Home">
+            <blockquote>
+              <p class="lead"> Welcome to the Vetro FiberMap Style Guide</p>
+              <p></p>
+
+              <stong>Some Other Helpful Resources</stron>
+              <ul>
+                <li><a href="https://getbootstrap.com/docs/3.3/css/">Bootstrap Docs</a></li>
+                <li><a href="http://angular-ui.github.io/bootstrap/versioned-docs/0.14.3/">UI [ Angular ] Bootstrap Docs</a></li>
+                <li><a href="http://fontawesome.io/examples/">Font Awesome Docs</a></li>
+                <li><a href="http://fontawesome.io/icons/">Font Awesome Icons</a></li>
+                <li><a href="https://css-tricks.com/almanac/">CSS Almanac [ CSS-Tricks ]</a></li>
+                <li><a href="http://colorbrewer2.org/#type=sequential&scheme=BuGn&n=3">Color Scales [ ColorBrewer ] </a></li>
+             </ul>
+
+            </blockquote>
+
+          </section>
+
+
+          <section id="buttons" section-title="Buttons">
+            <blockquote>
+              <p class="lead">
+                Thoughts on Buttons
+                <ul>
+                  <li>Try to limit the number of different colored buttons that we are using.  <small>While Bootstrap does provide us with contentual classes for states info, success, warning, these states are not easily interpreted and confuse the site's color pallet.</small></li>
+                  <li>All buttons should have "btn" and "btn-XXX" classes</li>
+                </ul>
+              </p>
+            </blockquote>
+
+            <div class="ex-block" block-title="Basic Buttons">
+              <div class="output-block" file-src="./examples/buttons-basic.html"></div>
+            </div>
+
+            <div class="ex-block" block-title="Other Buttons">
+              <div class="output-block" file-src="./examples/buttons-other.html"></div>
+            </div>
+
+
+            <div class="ex-block" block-title="Circle Buttons">
+              <div class="output-block" file-src="./examples/buttons-circle.html"></div>
+            </div>
+
+          </section>
+          <!-- /#buttons -->
+
+          <!-- #forms -->
+          <section id="forms" section-title="Forms">
+            <div class="ex-block" block-title="Input Field">
+              <div class="output-block" file-src="./examples/forms-input.html"></div>
+            </div>
+
+            <div class="ex-block" block-title="Select">
+              <div class="output-block" file-src="./examples/forms-select.html"></div>
+            </div>
+
+            <div class="ex-block" block-title="Checkbox">
+              <div class="output-block" file-src="./examples/forms-checkbox.html"></div>
+            </div>
+
+            <div class="ex-block" block-title="Radio">
+              <div class="output-block" file-src="./examples/forms-radio.html"></div>
+            </div>
+
+            <div class="ex-block" block-title="Text Area">
+              <div class="output-block" file-src="./examples/forms-textarea.html"></div>
+            </div>
+
+            <div class="ex-block" block-title="File Upload">
+              <div class="output-block" file-src="./examples/forms-file.html"></div>
+            </div>
+          </section>
+          <!-- /#forms -->
+
+          <!-- #icons -->
+          <section id="icons" section-title="Icons">
+            <div block-title="Vetro Icons" file-src="./examples/icons-vetro.html"> </div>
+          </section>
+          <!-- /#icons -->
+
+          <!-- #lists -->
+          <section id="lists" section-title="Lists">
+            <div class="ex-block" block-title="List Group">
+              <div class="output-block" file-src="./examples/lists-list-group.html"></div>
+            </div>
+
+            <div class="ex-block" block-title="List Group - Linked Items">
+              <div class="output-block" file-src="./examples/lists-list-group-links.html"></div>
+            </div>
+
+            <div class="ex-block" block-title="Striped List">
+              <div class="output-block" file-src="./examples/lists-striped.html"></div>
+            </div>
+          </section>
+          <!-- /#lists -->
+
+          <!-- #panels -->
+          <section id="panels" section-title="Panels">
+            <div class="ex-block" block-title="Panels">
+              <div class="output-block" file-src="./examples/panels-default.html"></div>
+            </div>
+
+            <div class="ex-block" block-title="Vertical Panel">
+              <div class="output-block" file-src="./examples/panels-vertical.html"></div>
+            </div>
+          </section>
+          <!-- /#panels -->
+
+          <!-- #tabs -->
+          <section id="tabs" section-title="Tabs">
+            <div class="ex-block" block-title="Tabs">
+              <div class="output-block" file-src="./examples/tabs-basic.html"></div>
+              <pre class="input-block"><code class="html" file-src="./examples/tabs-basic-angular.html"></code></pre>
+            </div>
+
+            <div class="ex-block" block-title="Justified Tabs">
+              <div class="output-block" file-src="./examples/tabs-justified.html"></div>
+            </div>
+
+            <div class="ex-block" block-title="Scrollable Tabs">
+              <div class="output-block" file-src="./examples/tabs-scrollable.html"></div>
+              <pre class="input-block"><code class="html" file-src="./examples/tabs-scrollable-angular.html"></code></pre>
+            </div>
+
+            <div class="ex-block" block-title="Tabs With Subnavigation">
+              <div class="output-block" file-src="./examples/tabs-subnav.html"></div>
+            </div>
+          </section>
+          <!-- /#tabs -->
+
+          <!-- #typography -->
+          <section id="typography" section-title="Typography">
+            <div class="ex-block" block-title="Headings">
+              <div class="output-block" file-src="./examples/typeography-headings.html"></div>
+            </div>
+
+            <div class="ex-block" block-title="Contextual Text">
+              <div class="output-block" file-src="./examples/typeography-contextual-colors.html"></div>
+            </div>
+          </section>
+          <!-- #typography -->
+
+          <!-- #name -->
+          <!-- <section id="name" section-title="Name">
+            <div class="ex-block" block-title="Block">
+              <div class="output-block" htm-src="name-block.html"></div>
+            </div>
+          </section> -->
+          <!-- /#name -->
+
+        </dib>
+      </div>
+    </div>
+
+  <script src="styleguide.js"></script>
+  </body>
+</html>

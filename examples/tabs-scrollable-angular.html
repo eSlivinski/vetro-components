@@ -1,0 +1,8 @@
+<scrollable-tabset show-tooltips="true" show-drop-down="false">
+  <uib-tabset>
+    <uib-tab ng-repeat="tab in tabs">
+      <uib-tab-heading> {{ tab.name }} </uib-tab-heading>
+      <div class="tab-content"> {{ tab.content }} </div>
+    </uib-tab>
+  </uib-tabset>
+</scrollable-tabset>
