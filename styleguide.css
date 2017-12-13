@@ -1,7 +1,10 @@
 @font-face {
   font-family: 'Font Awesome';
-  src: url('media/fonts/FontAwesome.otf') !important;
-  font-weight: normal;
+  src:  url('media/fonts/FontAwesome.eot');
+    src:  url('media/fonts/FontAwesome.eot') format('embedded-opentype'),
+      url('media/fonts/FontAwesome.ttf') format('truetype'),
+      url('media/fonts/FontAwesome.woff') format('woff'),
+      url('media/fonts/FontAwesome.svg') format('svg');
   font-style: normal;
 }
 
