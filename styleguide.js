@@ -1,4 +1,5 @@
 
+
 function openSection(e) {
   let active = document.querySelector('#guide-sidebar .active');
 
@@ -66,7 +67,7 @@ function buildExBlocks () {
       input.setAttribute('class', 'input-block');
 
       let code = document.createElement('code')
-      code.setAttribute('class', 'html');
+      code.setAttribute('data-language', 'html');
 
       code.innerHTML = output.innerHTML.slice();
 
@@ -74,10 +75,13 @@ function buildExBlocks () {
       ex.appendChild(input);
     }
   }
-  document.querySelectorAll('code').forEach(code=> {
-    code.innerHTML = parseCode(code.innerHTML, code.getAttribute('class'));
-    hljs.highlightBlock(code)
-  });
+
+  for (let block of document.querySelectorAll('code[data-language]')) {
+    let language = block.getAttribute('data-language');
+    block.innerHTML = parseCode(block.innerHTML, language);
+    block.classList.add(language);
+    hljs.highlightBlock(block)
+  }
 
 }
 

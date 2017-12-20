@@ -43,6 +43,7 @@
   margin-bottom: 20px;
 }
 
+
 /* EXAMPLES */
 .ex-block > .output-block {
   margin-top: 10px;
@@ -51,7 +52,6 @@
   border-top-left-radius: 2px;
   border-top-right-radius: 2px;
   border-bottom: none;
-  /*display: grid;*/
 }
 .ex-block > .output-block::before {
   content: 'Example :';
