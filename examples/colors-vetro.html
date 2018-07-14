@@ -1,0 +1,86 @@
+<style>
+  .swatch-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .swatch-container {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+  }
+  .color-swatch {
+    width: 150px;
+    height: 150px;
+    padding: 25px 10px;
+    text-align: center;
+    color:#fff;
+    border-radius: 2px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2)
+  }
+  .color-swatch.swatch-light {
+    color: #585858;
+  }
+  .color-swatch > .color-hex {
+    text-transform: uppercase;
+    font-size: 16px;
+  }
+  .color-swatch > .color-name {
+    font-size: 18px;
+    display: inline-block;
+    margin-bottom: 10px;
+  }
+</style>
+<div class="swatch-row">
+  <div class="swatch-container">
+    <div class="color-swatch"
+         style="background-color: #123456">
+      <span class="color-name">Vetro Blue</span>
+      <span class="color-hex">#123456</span>
+    </div>
+  </div>
+  <div class="swatch-container">
+    <div class="color-swatch"
+         style="background-color: #58585a">
+      <span class="color-name">Default Text</span>
+      <span class="color-hex">#58585a</span>
+    </div>
+  </div>
+  <div class="swatch-container">
+    <div class="color-swatch"
+         style="background-color: #B0BAC7">
+      <span class="color-name">Default Border</span>
+      <span class="color-hex">#B0BAC7</span>
+    </div>
+  </div>
+  <div class="swatch-container">
+    <div class="color-swatch swatch-light"
+         style="background-color: #F7F8FA">
+      <span class="color-name">Default Background</span>
+      <span class="color-hex">#F7F8FA</span>
+    </div>
+  </div>
+</div>
+<div class="swatch-row">
+  <div class="swatch-container">
+    <div class="color-swatch"
+         style="background-color: #0f7ec4">
+      <span class="color-name">Logo Blue</span>
+      <span class="color-hex">#0f7ec4</span>
+    </div>
+  </div>
+  <div class="swatch-container">
+    <div class="color-swatch"
+         style="background-color: #eb505e">
+      <span class="color-name">Logo Red</span>
+      <span class="color-hex">#eb505e</span>
+    </div>
+  </div>
+  <div class="swatch-container">
+    <div class="color-swatch"
+         style="background-color: #0a9506">
+      <span class="color-name">Logo Green</span>
+      <span class="color-hex">#0a9506</span>
+    </div>
+  </div>
+</div>
