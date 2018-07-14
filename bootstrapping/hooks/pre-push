@@ -1,0 +1,22 @@
+#!/bin/sh
+
+branch=$(git rev-parse --abbrev-ref HEAD)
+vetro_branch=$(git -C ../vetro-main rev-parse --abbrev-ref HEAD)
+
+echo "currently referencing vetro styles on ${vetro_branch}"
+
+if [[ branch != 'gh-pages'  ]]; then
+	sh .git/hooks/post-checkout
+elif [[ $vetro_branch != 'master' ]]; then
+	echo "switch vetro-main to master branch before continuing"
+	exit 1;
+else
+	rm -rf media
+	rm -rf styles
+	cp -rf ../vetro-main/www/static/styles styles
+	cp -rf ../vetro-main/www/static/media media
+
+	sed -i -e "s/\/media\/fonts/media\/fonts/g" styles/app.css
+	sed -i -e "s/media\/fonts/..\/media\/fonts/g" styles/app.css
+fi
+exit 0;

@@ -1,0 +1,25 @@
+{
+  "name": "vetro-components",
+  "version": "1.0.0",
+  "description": "Vetro FiberMap Style Guide",
+  "main": "styleguide.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "serve:python": "python -m SimpleHTTPServer 3000",
+    "serve:node": "http-server -p 3000",
+    "bootstrap": "sh bootstrapping/bootstrap.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eSlivinski/vetro-components.git"
+  },
+  "author": "Lizzi Slivinski",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/eSlivinski/vetro-components/issues"
+  },
+  "homepage": "https://github.com/eSlivinski/vetro-components#readme",
+  "dependencies": {}
+}
