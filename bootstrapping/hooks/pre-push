@@ -22,7 +22,7 @@ else
 	git add media
 	git add styles
 	git commit -m 'Update Vetro Files'
-
+	sh .git/hooks/post-checkout
 fi
 exit 0;
 ll
