@@ -5,9 +5,9 @@ vetro_branch=$(git -C ../vetro-main rev-parse --abbrev-ref HEAD)
 
 echo "currently referencing vetro styles on ${vetro_branch}"
 
-if [[ branch != 'gh-pages'  ]]; then
+if [[ "$branch" != "gh-pages"  ]]; then
 	sh .git/hooks/post-checkout
-elif [[ $vetro_branch != 'master' ]]; then
+elif [[ $vetro_branch != "master" ]]; then
 	echo "switch vetro-main to master branch before continuing"
 	exit 1;
 else
@@ -18,5 +18,11 @@ else
 
 	sed -i -e "s/\/media\/fonts/media\/fonts/g" styles/app.css
 	sed -i -e "s/media\/fonts/..\/media\/fonts/g" styles/app.css
+
+	git add media
+	git add styles
+	git commit -m 'Update Vetro Files'
+
 fi
 exit 0;
+ll
