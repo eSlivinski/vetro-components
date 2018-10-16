@@ -14,3 +14,5 @@
     + Install http server: `npm install -g http-server`
     + `npm run serve:node`
 - Open [localhost:3000](http://localhost:3000/#buttons) in your browser
+
+## Using the Style Guide
