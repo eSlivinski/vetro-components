@@ -23,8 +23,8 @@ function buildSections () {
       sections = document.querySelectorAll('[section-title]');
 
   for (let section of sections) {
-    let title = section.getAttribute('section-title')
-        sectionId = section.getAttribute('id');
+    let title = section.getAttribute('section-title');
+    let sectionId = section.getAttribute('id');
 
     let listItem = document.createElement('a');
     listItem.setAttribute('href', '#' + sectionId);
@@ -33,7 +33,6 @@ function buildSections () {
     listItem.onclick = openSection;
     nav.append(listItem);
 
-
     let sectionTitle = document.createElement('h1');
     sectionTitle.innerHTML = title;
     section.prepend(sectionTitle);
@@ -41,6 +40,7 @@ function buildSections () {
     section.classList.add('hidden');
   }
 }
+
 
 function parseCode (codeString, language) {
   if (language === 'html') {
@@ -51,12 +51,11 @@ function parseCode (codeString, language) {
 }
 
 function buildExBlocks () {
-  let blocks = document.querySelectorAll('.ex-block');
-  for (let ex of blocks) {
-
+  for (let ex of document.querySelectorAll('.ex-block')) {
+    // Add example title using the "block-title attribute"
     let blockTitle = document.createElement('h2');
     blockTitle.innerHTML = ex.getAttribute('block-title');
-    blockTitle.classList.add('block-title')
+    blockTitle.classList.add('block-title');
     ex.prepend(blockTitle);
 
     let output = ex.querySelector('.output-block'),
@@ -66,7 +65,7 @@ function buildExBlocks () {
       input = document.createElement('pre');
       input.setAttribute('class', 'input-block');
 
-      let code = document.createElement('code')
+      let code = document.createElement('code');
       code.setAttribute('data-language', 'html');
 
       code.innerHTML = output.innerHTML.slice();
@@ -80,7 +79,7 @@ function buildExBlocks () {
     let language = block.getAttribute('data-language');
     block.innerHTML = parseCode(block.innerHTML, language);
     block.classList.add(language);
-    hljs.highlightBlock(block)
+    hljs.highlightBlock(block);
   }
 
 }
@@ -100,7 +99,8 @@ function loadHTML (){
           div.innerHTML = xhttp.responseText;
           div.removeAttribute("file-src");
           resolve(xhttp.responseText);
-          console.log('Loaded:'+fileSrc)
+
+          console.log('Loaded:' + fileSrc);
         } else {
           reject(xhttp.status);
         }
@@ -109,10 +109,11 @@ function loadHTML (){
       xhttp.send();
     });
     promises.push(promise);
-  })
+  });
 
-  return Promise.all(promises)
+  return Promise.all(promises);
 }
+
 
 (function() {
   loadHTML()
@@ -123,7 +124,7 @@ function loadHTML (){
     // Activate Current Section
     let link = window.location.hash ?
       document.querySelector(`[href="${ window.location.hash }"]`) :
-      document.querySelector(`[href="#home"]`);
+        document.querySelector(`[href="#home"]`);
 
     if (!link) {
       link = document.querySelector(`[href="#home"]`);
@@ -133,7 +134,7 @@ function loadHTML (){
 
     document.querySelectorAll('input[checked="checked"]').forEach((el)=>{
       el.checked = true;
-    })
+    });
 
     // Reveal Main Content
     document.getElementById('main-content').classList.remove('hidden');
