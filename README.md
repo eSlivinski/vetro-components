@@ -95,11 +95,12 @@ The following examples demonstrate how to insert snippets into the main document
 2. Post-Checkout
   - Rebuilds symbolic links to VETRO media and styles
 
-:bangbang: **NOTE:** The githooks used in this repo aren't the most seamless bits of code to ever be created and can be finicky.
-*** Generally speaking however, the following workflow holds up:
- - 1. Code on master or dev branch
- - 2. Switch to gh-pages branch when you're ready to deploy
- - 3. Integrate your changes with `git merge {YOUR BRANCH}`
-  * If refs to media/styles are causing merge conflicts use `git clean -f` to remove untracked files
- - 4. Push your code up to github
- - 5. Switch back to your dev branch
+:warning: **NOTE:** The githooks used in this repo aren't the most seamless bits of code to ever be created and can be finicky.
+
+_... Generally speaking however, the following workflow holds up:_
+ 1. Code on master or dev branch
+ 2. Switch to gh-pages branch when you're ready to deploy
+ 3. Integrate your changes with `git merge {YOUR BRANCH}`
+  * If references to media or styles are causing merge conflicts use `git clean -f` to remove untracked files
+ 4. Push your code up to github
+ 5. Switch back to your dev branch
