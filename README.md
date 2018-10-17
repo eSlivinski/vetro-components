@@ -1,5 +1,5 @@
 # [vetro-components -- VETRO FiberMap Style Guide](https://eslivinski.github.io/vetro-components/)
-vetro-components was designed to make documenting styles, posting snippets, and understanding global style changes a seemless and straight-forward processes.  The repo has no dependencies and could easily be configured for other applications.
+vetro-components was designed to make documenting styles, posting snippets, and understanding global style changes a seamless and straight-forward processes.  The repo has no dependencies and could easily be configured for other applications.
 
 Using HTML snippets, the styleguide showcases the **input code** and **output compontents**, by injecting both into the main document using a few simple markup parameters.  
 
@@ -23,7 +23,7 @@ The following examples demonstrate how to insert snippets into the main document
 
 ### 1. Injecting HTML
 ```html
-<div file-src="./examples/snippet.html"> 
+<div file-src="./examples/snippet.html">
   <!--  The contents of the file will be injected here  -->
 </div>
 ```
@@ -35,11 +35,11 @@ The following examples demonstrate how to insert snippets into the main document
 </section>
 ```
 
-### 3. Snippet using the same input and ouput markup (most of the time)
+### 3. Snippet using the same input and output markup (most of the time)
 ```html
 <!-- Wrapper for a given example block with the title "Basic Snippet" -->
 <div class="ex-block" block-title="Basic Snippet">
-  
+
   <!--  File containing the markup for the output component  -->
   <!--  Will also be used to generate the input HTML code because no input-block is listed -->
   <div class="output-block" file-src="./examples/basic-snippet.html"></div>
@@ -52,9 +52,9 @@ The following examples demonstrate how to insert snippets into the main document
 <div class="ex-block" block-title="Complicated Snippet">
   <!--  File containing the markup for the output component  -->
   <div class="output-block" file-src="./examples/complicated-snippet-output.html"></div>
-  
+
   <!--  File containing the input code to generate the component -->
-  <!--  Note: The example can use any coding language to generate the synatax highlighting  -->
+  <!--  Note: The example can use any coding language to generate the syntax highlighting  -->
   <pre class="input-block"><code data-language="html" file-src="./examples/complicated-snippet-input.html"></code></pre>
 </div>
 ```
@@ -62,7 +62,7 @@ The following examples demonstrate how to insert snippets into the main document
 ### 5. Inline snippets
 ```html
 <div class="ex-block" block-title="Inline Snippet">
-  <!-- Snippets don't have to be stored in the examplses directory -->
+  <!-- Snippets don't have to be stored in the examples directory -->
   <!-- The contents of the output block will be used to generate code and HTML components for the example -->
   <div class="output-block"><p>I am but a simple snippet</p></div>
 </div>
@@ -85,8 +85,8 @@ The following examples demonstrate how to insert snippets into the main document
 - Open [localhost:3000](http://localhost:3000/#buttons) in your browser
 
 
-## GITHOOKS 
-1. Pre-Push - Designed to allow the style guide to be deployed to gh-pages 
+## GITHOOKS
+1. Pre-Push - Designed to allow the style guide to be deployed to gh-pages
   - Prior to pushing to a gh-pages branch
     * Replaces symbolic links to to vetro-main CSS with cached copies of VETRO's styles and media
     * Updates all font and media paths used in the vetro styles to use the correct location of the cached files
@@ -94,5 +94,12 @@ The following examples demonstrate how to insert snippets into the main document
   - On all other branches: see Post-Checkout
 2. Post-Checkout
   - Rebuilds symbolic links to VETRO media and styles
-  
-:bangbang: **NOTE:** The githooks used in this repo aren't the most seemless bits of code to ever be created and can be finicky. 
+
+:bangbang: **NOTE:** The githooks used in this repo aren't the most seamless bits of code to ever be created and can be finicky.
+*** Generally speaking however, the following workflow holds up:
+ - 1. Code on master or dev branch
+ - 2. Switch to gh-pages branch when you're ready to deploy
+ - 3. Integrate your changes with `git merge {YOUR BRANCH}`
+  * If refs to media/styles are causing merge conflicts use `git clean -f` to remove untracked files
+ - 4. Push your code up to github
+ - 5. Switch back to your dev branch
